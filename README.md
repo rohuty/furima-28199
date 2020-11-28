@@ -58,7 +58,7 @@ Things you may want to cover:
 
 ### Association
 - belongs_to :user
-- has_one :purchases
+- has_one :purchase
 - has_one_attached :image
 
 ## purchases テーブル
@@ -73,13 +73,14 @@ Things you may want to cover:
 - belongs_to :item
 - has_one :address
 
-## address テーブル
+## addresses テーブル
 
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
 | post_code | string | null: false |
 | prefecture_id | integer | null: false |
 | city | string | null: false |
+| address | string | null: false |
 | building_name | string | ||
 | phone_number | string | null: false, unique: true |
 | purchase | references | null: false, foreign_key: true |
